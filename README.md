@@ -16,6 +16,8 @@ I really like the 1140 CSS grid but I hate the idea of including all of those no
 
 ## How do I use it?
 
+I need to fill this out a bit to reflect the expanded scope of this project.
+
     @import "1140";
 
     div.bottom-section {
