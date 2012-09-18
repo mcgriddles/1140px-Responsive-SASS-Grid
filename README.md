@@ -18,6 +18,7 @@ I really like the 1140 CSS grid but I hate the idea of including all of those no
 
 I need to fill this out a bit to reflect the expanded scope of this project.
 
+```css
     @import "1140";
 
     div.bottom-section {
@@ -35,4 +36,4 @@ I need to fill this out a bit to reflect the expanded scope of this project.
     div.sidebar {
       @include column(4);
     }
-
+```
