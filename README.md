@@ -3,7 +3,7 @@
 ## Description
 A fork of the awesome of [SASS mixins](http://sass-lang.com/) created by [rschmuckler](https://github.com/rschmukler/1140-sass) to allow you to easily and more-sematically use [The 1140px CSS Grid System](http://cssgrid.net/).
 
-This also includes a version of the [push classes created by inky](https://gist.github.com/710796/5945729fe400299f98ba832869b6a82ec1840152).
+This also includes a mixin based on the [push classes created by inky](https://gist.github.com/710796/5945729fe400299f98ba832869b6a82ec1840152).
 
 ## Requirements
 SASS 3.2 is necessary for cool the media query stuff.
