@@ -1,0 +1,228 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>1140px SASS Grid</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    
+    <div class="breakpoints">
+      <aside id="breakpoints">
+          <div class="break-20em"><span>20em | <span class="pxwidth"> </span></span></div>
+          <div class="break-40em"><span>40em | <span class="pxwidth"> </span></span></div>
+          <div class="break-48em"><span>48em | <span class="pxwidth"> </span></span></div>
+          <div class="break-64em"><span>64em | <span class="pxwidth"> </span></span></div>
+          <div class="break-7125em"><span>71.25em | <span class="pxwidth"> </span></span></div>
+        </aside>
+    </div>
+
+    <div class="container">
+
+      <header class="row" role="banner">
+        <h1>1140px SASS Grid</h1>
+        <p><label><input type="checkbox" checked id="showbreakpoints"> Show breakpoints</label></p>
+      </header>
+
+      <div class="row">
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1">One</div>
+        <div class="col-1 last">One</div>
+      </div>
+
+      <div class="row">
+        <div class="col-2">Two Columns</div>
+        <div class="col-2">Two Columns</div>
+        <div class="col-2">Two Columns</div>
+        <div class="col-2">Two Columns</div>
+        <div class="col-2">Two Columns</div>
+        <div class="col-2 last">Two Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">Three Columns</div>
+        <div class="col-3">Three Columns</div>
+        <div class="col-3">Three Columns</div>
+        <div class="col-3 last">Three Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">Four Columns</div>
+        <div class="col-4">Four Columns</div>
+        <div class="col-4 last">Four Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">One</div>
+        <div class="col-11 last">Eleven Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-2">Two Columns</div>
+        <div class="col-10 last">Ten Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">Three Columns</div>
+        <div class="col-9 last">Nine Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">Four Columns</div>
+        <div class="col-8 last">Eight Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-5">Five Columns</div>
+        <div class="col-7 last">Seven Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">Six Columns</div>
+        <div class="col-6 last">Six Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-7">Seven Columns</div>
+        <div class="col-5 last">Five Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-8">Eight Columns</div>
+        <div class="col-4 last">Four Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-9">Nine Columns</div>
+        <div class="col-3 last">Three Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-10">Ten Columns</div>
+          <div class="col-2 last">Two Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-11">Eleven Columns</div>
+        <div class="col-1 last">One</div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">Twelve Columns</div>
+      </div>
+
+      <header class="row">
+        <h2>Push Classes</h2>
+      </header>
+
+      <div class="row">    
+        <div class="col-11 push-1">Eleven Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-10 push-2 last">Ten Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-9 push-3 last">Nine Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-8 push-4 last">Eight Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-7 push-5 last">Seven Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 push-6 last">Six Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-5 push-7 last">Five Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 push-8 last">Four Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-3 push-9 last">Three Columns</div>
+      </div>
+
+      <div class="row">      
+        <div class="col-2 push-10 last">Two Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-1 push-11 last">One</div>
+      </div>
+
+      <header class="row">
+        <h2>Layout Examples</h2>
+      </header>
+
+      <div class="row">
+        <div class="col-3">Three Columns</div>
+        <div class="col-6">Six Columns</div>
+        <div class="col-3 last">Three Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 push-4">Four Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 push-3">Six Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-8 push-2">Eight Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-10 push-1">Ten Columns</div>
+      </div>
+      
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script>
+      
+      function calcWidth() {
+        $('#breakpoints div').each(function(){
+          var thiswidth = $(this).width();
+          $('.pxwidth', this).text("Pixel width: " + thiswidth);
+        });
+      }
+      
+      $(document).ready(function() {
+        calcWidth();
+      });
+
+      $(window).resize(function() {
+        calcWidth();
+      });
+
+      $("#showbreakpoints").click(function() {
+        $('#breakpoints').slideToggle('fast');
+        calcWidth();
+      });
+      
+    </script>
+
+  </body>
+</html>
