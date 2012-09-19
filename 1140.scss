@@ -17,26 +17,50 @@
   }
 }
 
+// Column Killer Mixin - All columns go full-width when window hits this breakpoint
+@mixin column-killer {
+  @media (max-width: $column-killer-breakpoint) {
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px
+  };
+}
+
 @mixin container {
-  padding-left: 20px; padding-right: 20px;
-  @include breakpoint(phone-landscape) {
-    width: 100%; min-width: 0;
-    margin-left: 0; margin-right: 0; 
-    padding-left: 0; padding-right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include breakpoint($column-killer-breakpoint) {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 @mixin row {
-  width: 100%; max-width: $desktop-wide;
+  width: 100%;
+  max-width: $desktop-wide;
   margin: 0 auto;
   overflow: hidden;
-  @include breakpoint(phone-landscape) {
-    width: 100%; min-width: 0;
-    margin-left: 0; margin-right: 0;
-    padding-left: 0; padding-right: 0;
+  @include breakpoint($column-killer-breakpoint) {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
+// Last-Column Mixin
+@mixin last { margin-right: 0;}
+
+// Column Mixin
 @mixin column($num) {
   @if $num != 12 { margin-right: 3.8%; float: left; min-height: 1px; }
   @if $num == 1  { width: 04.85%; }
@@ -50,16 +74,16 @@
   @if $num == 9  { width: 74.05%; }
   @if $num == 10 { width: 82.70%; }
   @if $num == 11 { width: 91.35%; }
-  @if $num == 12 { width: 100%; float: left;}
-  @include breakpoint(phone-landscape) {
-    width: auto;
-    float: none;
-    margin-left: 0; margin-right: 0;
-    padding-left: 20px; padding-right: 20px;
-  }
+  @if $num == 12 { width: 100%; float: left; @include last;}
+  @include column-killer;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+// Push Mixin - Use push(0) in a media query to override push(n)
 @mixin push($num) {
+  @if $num == 0  { margin-left: 0; margin-right: 0; }
   @if $num == 1  { margin-left: 08.65%; }
   @if $num == 2  { margin-left: 17.30%; }
   @if $num == 3  { margin-left: 25.95%; }
@@ -71,28 +95,5 @@
   @if $num == 9  { margin-left: 77.85%; }
   @if $num == 10 { margin-left: 86.50%; }
   @if $num == 11 { margin-left: 95.15%; }
-  @include breakpoint(phone-landscape) {
-    margin-left: 0; margin-right: 0;
-  }
-}
-
-@mixin last { margin-right: 0;}
-
-@mixin centered {
-  margin: 0 auto; border: 1px solid red;
-}
-
-/* Smaller screens */
-@media handheld, only screen and (max-width: $desktop-small) {
-  body {line-height: 1.5em;}
-}
-
-/* Tablets */
-@media handheld, only screen and (max-width: $phone-landscape) {
-  body {
-    -webkit-text-size-adjust: none;
-    width: 100%; min-width: 0;
-    margin-left: 0; margin-right: 0;
-    padding-left: 0; padding-right: 0;
-  }
+  @include column-killer;
 }

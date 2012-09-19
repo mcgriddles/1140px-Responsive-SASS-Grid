@@ -1,0 +1,17 @@
+column
+
+  @include breakpoint(phone-landscape) {
+    width: auto;
+    float: none;
+    margin-left: 0; margin-right: 0;
+    padding-left: 20px; padding-right: 20px;
+  }
+  
+  
+  
+  
+push
+  
+  @include breakpoint(phone-landscape) {
+    margin-left: 0; margin-right: 0;
+  }
