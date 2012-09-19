@@ -1,63 +1,83 @@
+// Import the SCSS files
 @import 'globals';
 @import '1140';
-@import 'samples';
+@import 'examples';
 
-body {
-  font-family: Helvetica Neue, Helvetica, Arial;
-  font-size: 1em;
-  padding: 0;
-  margin: 0;
-}
-
-img,
-embed,
-object { max-width: 100%; }
-
+// If you use normalize.css or reset.css, it will provide similar defaults. 
+// This is mostly just to provide a baseline for demonstration purposes
+body { font-family: Helvetica Neue, Helvetica, Arial; font-size: 1em; padding: 0; margin: 0;}
+img, embed, object { max-width: 100%; }
 img {	height: auto; }
 
-/* Page Structure */
-.main      {@include container;}
-.content   {@include row;}
+// Non-semantic helper classes
+// These defeat the purpose of a semantic grid, but sometimes you don't have access to SASS
+// Also, sometimes you just don't care
+.container {@include container;}
+.row       {@include row;}
 
-.row div {background: #ddd; margin-bottom: 1em; padding: 10px;}
+.col-1   {@include column(1);}
+.col-2   {@include column(2);}
+.col-3   {@include column(3);}
+.col-4   {@include column(4);}
+.col-5   {@include column(5);}
+.col-6   {@include column(6);}
+.col-7   {@include column(7);}
+.col-8   {@include column(8);}
+.col-9   {@include column(9);}
+.col-10  {@include column(10);}
+.col-11  {@include column(11);}
+.col-12  {@include column(12); @include last;}
 
+.push-1  {@include push(1);}
+.push-2  {@include push(2);}
+.push-3  {@include push(3);}
+.push-4  {@include push(4);}
+.push-5  {@include push(5);}
+.push-6  {@include push(6);}
+.push-7  {@include push(7);}
+.push-8  {@include push(8);}
+.push-9  {@include push(9);}
+.push-10 {@include push(10);}
+.push-11 {@include push(11);}
+
+.last   {@include last;}
+
+// Sample Media queries - These use the breakpoints set in globals 
+// Use these or create new ones better suited to your site's needs
+@media only screen and (min-width: $desktop-wide) {
+  // Maximum Layout Width
+}
+@media only screen and (max-width: $desktop-wide) {
+  // Most Desktop Screens
+}
+@media only screen and (max-width: $desktop-small) {
+  // Smaller Screens (netbooks, iPad landscape)
+}
+@media only screen and (max-width: $tablet-portrait) {
+  // Tablets
+}
+@media only screen and (max-width: $phone-landscape) {
+  // Phone Landscape
+}
+@media only screen and (max-width: $phone-portrait) {
+  // Phone Portrait
+}
+
+// You can safely ignore everything below this comment. It's just for demonstration purposes.
+
+// To better see the example columns
+.row div {background: #ddd; margin-bottom: 1em; padding: 10px; text-align: center;}
+
+// Breakpoints Overlay
 #breakpoints {max-width: 1140px;  margin: 0 auto; position: relative;}
-
 #meters {position: fixed; z-index: 1;  top: 150px; max-width: 1140px; width: 100%; background: rgba(143,216,243,0.78); padding-top: 1em;}   
-
-#breakpoints div { 
-  background: rgba(207,16,147,0.8);
-  margin-bottom: 1em; padding: 0; 
-  color: #fff; text-shadow: 0px -1px 0px rgba(0,0,0,.3);}
-
+#breakpoints div {background: rgba(207,16,147,0.8); margin-bottom: 1em; padding: 0; color: #fff; text-shadow: 0px -1px 0px rgba(0,0,0,.3);}
 #breakpoints div > span {padding: 10px; display: inline-block; font-size: .8em;}
 #breakpoints .pointname {display: inline-block; width: 120px;}
 #breakpoints .emwidth {display: inline-block; width: 60px; padding-left: 15px;}
 #breakpoints .pxwidth {display: inline-block; padding-left: 15px;}
-
-.break-20em {max-width: 20em;}
-.break-40em {max-width: 40em;}
-.break-48em {max-width: 48em;}
-.break-64em {max-width: 64em;}
+.break-20em   {max-width: 20em;}
+.break-40em   {max-width: 40em;}
+.break-48em   {max-width: 48em;}
+.break-64em   {max-width: 64em;}
 .break-7125em {max-width: 71.25em;}
-
-
-// Smaller screens
-@media handheld, only screen and (max-width: $desktop-small) {
-  body {
-    line-height: 1.5em;
-  }
-}
-
-// Tablets
-@media handheld, only screen and (max-width: $phone-landscape) {
-  body {
-    width: 100%;
-    min-width: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    -webkit-text-size-adjust: none;
-  }
-}

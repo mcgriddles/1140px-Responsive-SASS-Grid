@@ -1,3 +1,250 @@
+.mcs, .df {
+  border-top: 1px solid #ccc;
+  padding: 40px 0; }
+
+/* McSweeney's-inspired layout */
+.mcs {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .mcs .mcs-content {
+    width: 100%;
+    max-width: 71.25em;
+    margin: 0 auto;
+    overflow: hidden; }
+    .mcs .mcs-content article {
+      margin-right: 3.8%;
+      float: left;
+      min-height: 1px;
+      width: 30.75%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-left: 34.60%; }
+      @media (max-width: 40em) {
+        .mcs .mcs-content article {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media (max-width: 40em) {
+        .mcs .mcs-content article {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media (max-width: 64em) {
+        .mcs .mcs-content article {
+          margin-right: 3.8%;
+          float: left;
+          min-height: 1px;
+          width: 48.00%;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-left: 25.95%; } }
+        @media (max-width: 64em) and (max-width: 40em) {
+          .mcs .mcs-content article {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+        @media (max-width: 64em) and (max-width: 40em) {
+          .mcs .mcs-content article {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+      @media (max-width: 40em) {
+        .mcs .mcs-content article {
+          margin-right: 3.8%;
+          float: left;
+          min-height: 1px;
+          width: 48.00%;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-left: 25.95%; } }
+        @media (max-width: 40em) and (max-width: 40em) {
+          .mcs .mcs-content article {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+        @media (max-width: 40em) and (max-width: 40em) {
+          .mcs .mcs-content article {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+      @media (max-width: 20em) {
+        .mcs .mcs-content article {
+          margin-right: 3.8%;
+          float: left;
+          min-height: 1px;
+          width: 65.40%;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-left: 17.30%; } }
+        @media (max-width: 20em) and (max-width: 40em) {
+          .mcs .mcs-content article {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+        @media (max-width: 20em) and (max-width: 40em) {
+          .mcs .mcs-content article {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+
+.mcs header {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px; }
+  .mcs header h1 {
+    font-size: 1em;
+    font-weight: normal; }
+    .mcs header h1 i {
+      font-style: normal;
+      display: block;
+      font-size: 3em; }
+
+.mcs article header {
+  margin: 2em 0;
+  padding: 2em 0 0 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  letter-spacing: 3px; }
+
+/* Daring Fireball-inspired layout */
+.df {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .df header {
+    width: 100%;
+    max-width: 71.25em;
+    margin: 0 auto;
+    overflow: hidden; }
+    .df header h1 {
+      margin-left: 25.95%;
+      margin-right: 0; }
+      @media (max-width: 40em) {
+        .df header h1 {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media (max-width: 48em) {
+        .df header h1 {
+          margin-left: 17.30%; } }
+        @media (max-width: 48em) and (max-width: 40em) {
+          .df header h1 {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+  .df .df-content {
+    width: 100%;
+    max-width: 71.25em;
+    margin: 0 auto;
+    overflow: hidden; }
+    .df .df-content .df-nav {
+      margin-right: 3.8%;
+      float: left;
+      min-height: 1px;
+      width: 13.45%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-left: 17.30%; }
+      @media (max-width: 40em) {
+        .df .df-content .df-nav {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media (max-width: 40em) {
+        .df .df-content .df-nav {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media (max-width: 48em) {
+        .df .df-content .df-nav {
+          margin-left: 08.65%; } }
+        @media (max-width: 48em) and (max-width: 40em) {
+          .df .df-content .df-nav {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+      @media (max-width: 40em) {
+        .df .df-content .df-nav {
+          margin-left: 0;
+          margin-right: 0; } }
+        @media (max-width: 40em) and (max-width: 40em) {
+          .df .df-content .df-nav {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+    .df .df-content .df-text {
+      margin-right: 3.8%;
+      float: left;
+      min-height: 1px;
+      width: 39.45%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right: 0; }
+      @media (max-width: 40em) {
+        .df .df-content .df-text {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media (max-width: 48em) {
+        .df .df-content .df-text {
+          margin-right: 3.8%;
+          float: left;
+          min-height: 1px;
+          width: 65.40%;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; } }
+        @media (max-width: 48em) and (max-width: 40em) {
+          .df .df-content .df-text {
+            width: auto;
+            float: none;
+            margin-left: 0;
+            margin-right: 0; } }
+
+.df-nav {
+  text-align: right; }
+  .df-nav ul {
+    list-style: none;
+    padding: 0; }
+  @media (max-width: 40em) {
+    .df-nav {
+      text-align: left; }
+      .df-nav ul li {
+        display: inline-block;
+        padding-right: 10px; } }
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial;
+  font-size: 1em;
+  padding: 0;
+  margin: 0; }
+
+img, embed, object {
+  max-width: 100%; }
+
+img {
+  height: auto; }
+
 .container {
   padding-left: 20px;
   padding-right: 20px; }
@@ -21,9 +268,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-2 {
   margin-right: 3.8%;
@@ -38,9 +283,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-3 {
   margin-right: 3.8%;
@@ -55,9 +298,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-4 {
   margin-right: 3.8%;
@@ -72,9 +313,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-5 {
   margin-right: 3.8%;
@@ -89,9 +328,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-6 {
   margin-right: 3.8%;
@@ -106,9 +343,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-7 {
   margin-right: 3.8%;
@@ -123,9 +358,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-8 {
   margin-right: 3.8%;
@@ -140,9 +373,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-9 {
   margin-right: 3.8%;
@@ -157,9 +388,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-10 {
   margin-right: 3.8%;
@@ -174,9 +403,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-11 {
   margin-right: 3.8%;
@@ -191,9 +418,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .col-12 {
   width: 100%;
@@ -208,9 +433,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-1 {
   margin-left: 08.65%; }
@@ -219,9 +442,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-2 {
   margin-left: 17.30%; }
@@ -230,9 +451,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-3 {
   margin-left: 25.95%; }
@@ -241,9 +460,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-4 {
   margin-left: 34.60%; }
@@ -252,9 +469,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-5 {
   margin-left: 43.25%; }
@@ -263,9 +478,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-6 {
   margin-left: 51.90%; }
@@ -274,9 +487,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-7 {
   margin-left: 60.55%; }
@@ -285,9 +496,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-8 {
   margin-left: 69.20%; }
@@ -296,9 +505,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-9 {
   margin-left: 77.85%; }
@@ -307,9 +514,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-10 {
   margin-left: 86.50%; }
@@ -318,9 +523,7 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .push-11 {
   margin-left: 95.15%; }
@@ -329,224 +532,16 @@
       width: auto;
       float: none;
       margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      margin-right: 0; } }
 
 .last {
   margin-right: 0; }
 
-.mcsweeneys {
-  margin-right: 3.8%;
-  float: left;
-  min-height: 1px;
-  width: 48.00%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-left: 25.95%; }
-  @media (max-width: 40em) {
-    .mcsweeneys {
-      width: auto;
-      float: none;
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
-  @media (max-width: 40em) {
-    .mcsweeneys {
-      width: auto;
-      float: none;
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 20px;
-      padding-right: 20px; } }
-  @media (max-width: 64em) {
-    .mcsweeneys {
-      margin-right: 3.8%;
-      float: left;
-      min-height: 1px;
-      width: 65.40%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      margin-left: 17.30%; } }
-    @media (max-width: 64em) and (max-width: 40em) {
-      .mcsweeneys {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-    @media (max-width: 64em) and (max-width: 40em) {
-      .mcsweeneys {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-  @media (max-width: 48em) {
-    .mcsweeneys {
-      margin-right: 3.8%;
-      float: left;
-      min-height: 1px;
-      width: 82.70%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      margin-left: 08.65%; } }
-    @media (max-width: 48em) and (max-width: 40em) {
-      .mcsweeneys {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-    @media (max-width: 48em) and (max-width: 40em) {
-      .mcsweeneys {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-  @media (max-width: 40em) {
-    .mcsweeneys {
-      width: 100%;
-      float: left;
-      margin-right: 0;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      margin-left: 0;
-      margin-right: 0; } }
-    @media (max-width: 40em) and (max-width: 40em) {
-      .mcsweeneys {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-    @media (max-width: 40em) and (max-width: 40em) {
-      .mcsweeneys {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-
-.daringfireball {
-  padding-left: 20px;
-  padding-right: 20px; }
-  .daringfireball header {
-    width: 100%;
-    max-width: 71.25em;
-    margin: 0 auto;
-    overflow: hidden; }
-    .daringfireball header h1 {
-      margin-right: 3.8%;
-      float: left;
-      min-height: 1px;
-      width: 48.00%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      margin-left: 17.30%;
-      margin-right: 0; }
-      @media (max-width: 40em) {
-        .daringfireball header h1 {
-          width: auto;
-          float: none;
-          margin-left: 0;
-          margin-right: 0;
-          padding-left: 20px;
-          padding-right: 20px; } }
-      @media (max-width: 40em) {
-        .daringfireball header h1 {
-          width: auto;
-          float: none;
-          margin-left: 0;
-          margin-right: 0;
-          padding-left: 20px;
-          padding-right: 20px; } }
-  .daringfireball .df-nav {
-    text-align: right;
-    margin-right: 3.8%;
-    float: left;
-    min-height: 1px;
-    width: 13.45%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin-left: 17.30%; }
-    @media (max-width: 40em) {
-      .daringfireball .df-nav {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-    @media (max-width: 40em) {
-      .daringfireball .df-nav {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-  .daringfireball .df-text {
-    margin-right: 3.8%;
-    float: left;
-    min-height: 1px;
-    width: 30.75%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin-right: 0; }
-    @media (max-width: 40em) {
-      .daringfireball .df-text {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px; } }
-
-body {
-  font-family: Helvetica Neue, Helvetica, Arial;
-  font-size: 1em;
-  padding: 0;
-  margin: 0; }
-
-img,
-embed,
-object {
-  max-width: 100%; }
-
-img {
-  height: auto; }
-
-/* Page Structure */
-.main {
-  padding-left: 20px;
-  padding-right: 20px; }
-
-.content {
-  width: 100%;
-  max-width: 71.25em;
-  margin: 0 auto;
-  overflow: hidden; }
-
 .row div {
   background: #ddd;
   margin-bottom: 1em;
-  padding: 10px; }
+  padding: 10px;
+  text-align: center; }
 
 #breakpoints {
   max-width: 1140px;
@@ -601,16 +596,3 @@ img {
 
 .break-7125em {
   max-width: 71.25em; }
-
-@media handheld, only screen and (max-width: 64em) {
-  body {
-    line-height: 1.5em; } }
-@media handheld, only screen and (max-width: 40em) {
-  body {
-    width: 100%;
-    min-width: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    -webkit-text-size-adjust: none; } }

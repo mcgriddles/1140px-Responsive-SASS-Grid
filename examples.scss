@@ -1,0 +1,92 @@
+// Sample Layouts
+%sample {border-top: 1px solid #ccc; padding: 40px 0;}
+
+/* McSweeney's-inspired layout */
+.mcs {
+  @extend %sample;
+  @include container;
+  .mcs-content {
+    @include row;
+    article {
+      @include column(4);
+      @include push(4);
+      @include breakpoint(desktop-small) {
+        @include column(6);
+        @include push(3);
+      }
+      @include breakpoint(phone-landscape) {
+        @include column(6);
+        @include push(3);
+      }
+      @include breakpoint(phone-portrait) {
+        @include column(8);
+        @include push(2);
+      }
+    }
+  }
+}
+// Separated out design from the layout for clarity
+.mcs header {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+  h1 {
+    font-size: 1em; font-weight: normal;
+    i {font-style: normal; display: block; font-size: 3em;}
+  }
+}
+.mcs article {
+  header {
+    margin: 2em 0;
+    padding: 2em 0 0 0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+}
+
+
+/* Daring Fireball-inspired layout */
+.df {
+  @extend %sample;
+  @include container;
+  header {
+    @include row;
+    h1 {
+      @include push(3);
+      @include last;
+      @include breakpoint(tablet-portrait) {
+        @include push(2);
+      }
+    }
+  }
+  .df-content {
+    @include row;
+    .df-nav {
+      @include column(2);
+      @include push(2);
+      @include breakpoint(tablet-portrait) {
+        @include push(1);
+      }
+      @include breakpoint(phone-landscape) {
+        @include push(0);
+      }
+    }
+    .df-text {
+      @include column(5);
+      @include last;
+      @include breakpoint(tablet-portrait) {
+        @include column(8);
+      }
+    }
+  }
+}
+// Separated out design from the layout for clarity
+.df-nav {
+  text-align: right;
+  ul {list-style: none; padding: 0;}
+  @include breakpoint(phone-landscape) {
+    text-align: left;
+    ul li {display: inline-block; padding-right: 10px;}
+  }
+}

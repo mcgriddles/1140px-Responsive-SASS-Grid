@@ -1,0 +1,169 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Layout Examples | 1140px SASS Grid</title>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <div id="breakpoints">
+      <aside id="meters">
+        <div class="break-20em"><span><span class="pointname">Phone portrait</span> | <span class="emwidth">20em</span> | <span class="pxwidth"> </span></span></div>
+        <div class="break-40em"><span><span class="pointname">Phone landscape</span> | <span class="emwidth">40em</span> | <span class="pxwidth"> </span></span></div>
+        <div class="break-48em"><span><span class="pointname">Tablet portrait</span> | <span class="emwidth">48em</span> | <span class="pxwidth"> </span></span></div>
+        <div class="break-64em"><span><span class="pointname">Desktop small</span> | <span class="emwidth">64em</span> | <span class="pxwidth"> </span></span></div>
+        <div class="break-7125em"><span><span class="pointname">Desktop wide</span> | <span class="emwidth">71.25em</span> | <span class="pxwidth"> </span></span></div>
+      </aside>
+    </div>
+
+    <div class="container">
+
+      <header class="row" role="banner">
+        <h1>1140px SASS Grid Example Layouts</h1>
+        <p><label><input type="checkbox" id="showbreakpoints"> Show breakpoints</label></p>
+      </header>
+
+      <header class="row">
+        <h2>Layout Examples</h2>
+        <p>These are default layouts to illustrate flexible columns. </p>
+      </header>
+
+      <div class="row">
+        <div class="col-4 push-4">Four Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 push-3">Six Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-8 push-2">Eight Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-10 push-1">Ten Columns</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-3 push-1">Three Columns</div>
+        <div class="col-4">Four Columns</div>
+        <div class="col-3 last">Three Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 push-1">Four Columns</div>
+        <div class="col-4 push-2 last">Four Columns</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-5 push-1">Five Columns</div>
+        <div class="col-5 last">Five Columns</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-4">Four Columns</div>
+        <div class="push-4 col-4 last">Four Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">Six Columns</div>
+        <div class="col-6 last">Six Columns</div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">Three Columns</div>
+        <div class="col-6">Six Columns</div>
+        <div class="col-3 last">Three Columns</div>
+      </div>
+
+    </div>
+    
+    <div class="container">
+      <header class="row">
+        <h2>Semantic Layout Examples</h2>
+        <p>These examples feature breakpoints that change the structure by using `@extend` instead of nonsemantic grid classes like "col-8 push-2".</p>
+      </header>
+    </div>
+    
+    
+    
+    <div class="mcs">
+      <div class="mcs-content">
+        <header>
+          <h1>This is <i>quite simple</i></h1>
+          <p>But effective</p>
+        </header>
+        <article>
+          <header>
+            <h1>Article title</h1>
+            <p>By Mr. Author</p>
+          </header>
+          <p>In a container with a width of the full 1140 pixels, a centered block of text spanning six or eight columns might look fine, but as it scales down, it will become too narrow before it hits mobile breakpoints. By using mixins, we can easily change the number of columns at each breakpoint.</p>
+          <img src="http://www.placehold.it/1200x400.png/FF1493/fff&text=grids+are+fun">
+          <p>Compare this to the centered four columns above, which becomes too narrow as you resize the page inward.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="df">
+      <header>
+        <h1>&#10026; All Politics, All Sports</h1>
+      </header>
+      <div class="df-content">
+        <nav class="df-nav">
+          <p>By Hans Gruber</p>
+          <ul>
+            <li>Lorem Ipsum
+            <li>Ipsum Dolor
+            <li>Dolor Set
+            <li>Set Amet
+            <li>Bacon Ipsum
+          </ul>
+        </nav>
+        <div class="df-text">
+          <article>
+            <h1>Article Title</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <img src="http://www.placehold.it/1200x400.png/FF1493/fff&text=grids+are+fun">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script>
+
+      function calcWidth() {
+        $('#breakpoints div').each(function(){
+          var thiswidth = $(this).width();
+          $('.pxwidth', this).text(thiswidth + " px");
+        });
+      }
+
+      $(document).ready(function() {
+        $("#breakpoints").hide();
+        calcWidth();
+      });
+
+      $(window).resize(function() {
+        calcWidth();
+      });
+
+      $("#showbreakpoints").click(function() {
+        $('#breakpoints').toggle('fast');
+        calcWidth();
+      });
+
+    </script>
+
+  </body>
+</html>
