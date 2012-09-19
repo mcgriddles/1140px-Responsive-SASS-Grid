@@ -63,7 +63,6 @@ This example uses includes the container, row, column and push mixins…
 ```scss
 
     .mcs {
-      @extend %sample;
       @include container;
       .mcs-content {
         @include row;
@@ -78,6 +77,7 @@ This example uses includes the container, row, column and push mixins…
 Markup for this example…
 
 ```html
+
     <div class="mcs">
       <div class="mcs-content">
         <article>
@@ -94,7 +94,6 @@ Include breakpoint mixins to add a responsive element as the page width shrinks.
 ```scss
 
     .mcs {
-      @extend %sample;
       @include container;
       .mcs-content {
         @include row;
