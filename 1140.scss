@@ -9,6 +9,9 @@
   @if $point == tablet-portrait {
     @media (max-width: $tablet-portrait) { @content; }
   }
+  @if $point == phone-wide-landscape {
+    @media (max-width: $phone-wide-landscape) { @content; }
+  }
   @if $point == phone-landscape {
     @media (max-width: $phone-landscape) { @content; }
   }
