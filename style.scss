@@ -56,8 +56,11 @@ img {	height: auto; }
 @media only screen and (max-width: $tablet-portrait) {
   // Tablets
 }
+@media only screen and (max-width: $phone-wide-landscape) {
+  // Phone Landscape for wider phones (iPhone 5, etc.)
+}
 @media only screen and (max-width: $phone-landscape) {
-  // Phone Landscape
+  // Phone Landscape (traditional smartphone)
 }
 @media only screen and (max-width: $phone-portrait) {
   // Phone Portrait
@@ -69,15 +72,17 @@ img {	height: auto; }
 .row div {background: #ddd; margin-bottom: 1em; padding: 10px; text-align: center;}
 
 // Breakpoints Overlay
-#breakpoints {max-width: 1140px;  margin: 0 auto; position: relative;}
-#meters {position: fixed; z-index: 1;  top: 150px; max-width: 1140px; width: 100%; background: rgba(143,216,243,0.78); padding-top: 1em;}   
+.showbreakpoints {text-align: right; font-size: .8em;}
+#breakpoints {max-width: 1140px;  margin: 0 auto; position: relative; display: none;}
+#meters {position: fixed; z-index: 1;  top: 50px; max-width: 1140px; width: 100%; background: rgba(143,216,243,0.78); padding-top: 1em;}   
 #breakpoints div {background: rgba(207,16,147,0.8); margin-bottom: 1em; padding: 0; color: #fff; text-shadow: 0px -1px 0px rgba(0,0,0,.3);}
 #breakpoints div > span {padding: 10px; display: inline-block; font-size: .8em;}
-#breakpoints .pointname {display: inline-block; width: 120px;}
+#breakpoints .pointname {display: inline-block; width: 135px;}
 #breakpoints .emwidth {display: inline-block; width: 60px; padding-left: 15px;}
 #breakpoints .pxwidth {display: inline-block; padding-left: 15px;}
 .break-20em   {max-width: 20em;}
-.break-40em   {max-width: 40em;}
+.break-30em   {max-width: 30em;}
+.break-355em  {max-width: 35.5em;}
 .break-48em   {max-width: 48em;}
 .break-64em   {max-width: 64em;}
 .break-7125em {max-width: 71.25em;}

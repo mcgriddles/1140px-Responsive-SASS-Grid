@@ -226,6 +226,9 @@
   .df-nav ul {
     list-style: none;
     padding: 0; }
+  @media (max-width: 35.5em) {
+    .df-nav li {
+      font-size: .8em; } }
   @media (max-width: 30em) {
     .df-nav {
       text-align: left; }
@@ -543,15 +546,20 @@ img {
   padding: 10px;
   text-align: center; }
 
+.showbreakpoints {
+  text-align: right;
+  font-size: .8em; }
+
 #breakpoints {
   max-width: 1140px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  display: none; }
 
 #meters {
   position: fixed;
   z-index: 1;
-  top: 150px;
+  top: 50px;
   max-width: 1140px;
   width: 100%;
   background: rgba(143, 216, 243, 0.78);
@@ -571,7 +579,7 @@ img {
 
 #breakpoints .pointname {
   display: inline-block;
-  width: 120px; }
+  width: 135px; }
 
 #breakpoints .emwidth {
   display: inline-block;
@@ -585,8 +593,11 @@ img {
 .break-20em {
   max-width: 20em; }
 
-.break-40em {
-  max-width: 40em; }
+.break-30em {
+  max-width: 30em; }
+
+.break-355em {
+  max-width: 35.5em; }
 
 .break-48em {
   max-width: 48em; }

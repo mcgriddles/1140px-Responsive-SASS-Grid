@@ -85,6 +85,9 @@
 .df-nav {
   text-align: right;
   ul {list-style: none; padding: 0;}
+  @include breakpoint(phone-wide-landscape) {
+    li {font-size: .8em;}
+  }
   @include breakpoint(phone-landscape) {
     text-align: left;
     ul li {display: inline-block; padding-right: 10px;}
