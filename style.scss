@@ -61,7 +61,7 @@ img {	height: auto; }
 }
 @media only screen and (max-width: $phone-landscape) {
   // Phone Landscape (traditional smartphone)
-  -webkit-text-size-adjust: none;
+  body {-webkit-text-size-adjust: none;}
 }
 @media only screen and (max-width: $phone-portrait) {
   // Phone Portrait

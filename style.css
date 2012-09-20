@@ -541,7 +541,8 @@ img {
   margin-right: 0; }
 
 @media only screen and (max-width: 30em) {
-  -webkit-text-size-adjust: none; }
+  body {
+    -webkit-text-size-adjust: none; } }
 .row div {
   background: #ddd;
   margin-bottom: 1em;
