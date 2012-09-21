@@ -69,18 +69,37 @@ img {	height: auto; }
 
 // You can safely ignore everything below this comment. It's just for demonstration purposes.
 
+// Overlay Controls
+.controls .checkboxes {
+  @include column(3); @include push(9); @include last;
+  font-size: .8em; background: transparent; text-align: left;
+}
+
 // To better see the example columns
 .row div {background: #ddd; margin-bottom: 1em; padding: 10px; text-align: center;}
 
-// Breakpoints Overlay
-.showbreakpoints {text-align: right; font-size: .8em;}
-#breakpoints {max-width: 1140px;  margin: 0 auto; position: relative; display: none;}
+// Grid Overlay
+//.overlay{ width: 100%; height: 100%; background: red;}
+
+#grid-overlay {position: fixed; width: 100%; height: 100%;}
+#overlay-container {max-width: 75.5em; margin: 0 auto; padding-left: 3.8%;
+  @include container;
+  .overlay-row {
+    @include row;
+    div {min-height: 999em; background: rgba(255,0,0,.07); 
+    }
+  }
+}
+
+
+
+#breakpoints-overlay {max-width: 1140px;  margin: 0 auto; position: relative;}
 #meters {position: fixed; z-index: 1;  top: 50px; max-width: 1140px; width: 100%; background: rgba(143,216,243,0.78); padding-top: 1em;}   
-#breakpoints div {background: rgba(207,16,147,0.8); margin-bottom: 1em; padding: 0; color: #fff; text-shadow: 0px -1px 0px rgba(0,0,0,.3);}
-#breakpoints div > span {padding: 10px; display: inline-block; font-size: .8em;}
-#breakpoints .pointname {display: inline-block; width: 135px;}
-#breakpoints .emwidth {display: inline-block; width: 60px; padding-left: 15px;}
-#breakpoints .pxwidth {display: inline-block; padding-left: 15px;}
+#meters div {background: rgba(207,16,147,0.8); margin-bottom: 1em; padding: 0; color: #fff; text-shadow: 0px -1px 0px rgba(0,0,0,.3);}
+#breakpoints-overlay div > span {padding: 10px; display: inline-block; font-size: .8em;}
+#breakpoints-overlay .pointname {display: inline-block; width: 135px;}
+#breakpoints-overlay .emwidth {display: inline-block; width: 60px; padding-left: 15px;}
+#breakpoints-overlay .pxwidth {display: inline-block; padding-left: 15px;}
 .break-20em   {max-width: 20em;}
 .break-30em   {max-width: 30em;}
 .break-355em  {max-width: 35.5em;}

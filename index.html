@@ -11,21 +11,14 @@
 
   <body>
     
-    <div class="container">
+    <div class="controls container">
       <div class="row">
-        <p class="showbreakpoints"><label><input type="checkbox" id="showbreakpoints"> Show breakpoints</label></p>
+        <div class="checkboxes">
+          <label><input type="checkbox" data-controls="breakpoints"> Show breakpoints</label><br>
+          <label><input type="checkbox" data-controls="grid"> Show grid</label>
+        </div>
       </div>
-    </div>
-    <div id="breakpoints">  
-      <aside id="meters">
-        <div class="break-20em"><span><span class="pointname">Phone portrait</span> | <span class="emwidth">20em</span> | <span class="pxwidth"> </span></span></div>
-        <div class="break-30em"><span><span class="pointname">Phone landscape</span> | <span class="emwidth">30em</span> | <span class="pxwidth"> </span></span></div>
-        <div class="break-355em"><span><span class="pointname">Phone wide landscape</span> | <span class="emwidth">35.5em</span> | <span class="pxwidth"> </span></span></div>
-        <div class="break-48em"><span><span class="pointname">Tablet portrait</span> | <span class="emwidth">48em</span> | <span class="pxwidth"> </span></span></div>
-        <div class="break-64em"><span><span class="pointname">Desktop small</span> | <span class="emwidth">64em</span> | <span class="pxwidth"> </span></span></div>
-        <div class="break-7125em"><span><span class="pointname">Desktop wide</span> | <span class="emwidth">71.25em</span> | <span class="pxwidth"> </span></span></div>
-      </aside>
-    </div>
+    </div>    
 
     <div class="container">
 
@@ -188,29 +181,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script>
-
-      function calcWidth() {
-        $('#breakpoints div').each(function(){
-          var thiswidth = $(this).width();
-          $('.pxwidth', this).text(thiswidth + " px");
-        });
-      }
-
-      $(document).ready(function() {
-        calcWidth();
-      });
-
-      $(window).resize(function() {
-        calcWidth();
-      });
-
-      $("#showbreakpoints").click(function() {
-        $('#breakpoints').toggle('fast');
-        calcWidth();
-      });
-
-    </script>
+    <script src="examples.js"></script>
 
   </body>
 </html>

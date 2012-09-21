@@ -1,6 +1,38 @@
-.mcs, .df {
+.feature-freeform, .mcs, .df {
   border-top: 1px solid #ccc;
   padding: 40px 0; }
+
+.feature-freeform {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .feature-freeform .feature-content {
+    width: 100%;
+    max-width: 71.25em;
+    margin: 0 auto;
+    overflow: hidden; }
+    .feature-freeform .feature-content article {
+      padding: 20px;
+      background: #ddd;
+      margin-right: 3.8%;
+      float: left;
+      min-height: 1px;
+      width: 65.40%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-left: 17.30%; }
+      @media (max-width: 30em) {
+        .feature-freeform .feature-content article {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media (max-width: 30em) {
+        .feature-freeform .feature-content article {
+          width: auto;
+          float: none;
+          margin-left: 0;
+          margin-right: 0; } }
 
 /* McSweeney's-inspired layout */
 .mcs {
@@ -543,21 +575,62 @@ img {
 @media only screen and (max-width: 30em) {
   body {
     -webkit-text-size-adjust: none; } }
+.controls .checkboxes {
+  margin-right: 3.8%;
+  float: left;
+  min-height: 1px;
+  width: 22.05%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 77.85%;
+  margin-right: 0;
+  font-size: .8em;
+  background: transparent;
+  text-align: left; }
+  @media (max-width: 30em) {
+    .controls .checkboxes {
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-right: 0; } }
+  @media (max-width: 30em) {
+    .controls .checkboxes {
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-right: 0; } }
+
 .row div {
   background: #ddd;
   margin-bottom: 1em;
   padding: 10px;
   text-align: center; }
 
-.showbreakpoints {
-  text-align: right;
-  font-size: .8em; }
+#grid-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
 
-#breakpoints {
+#overlay-container {
+  max-width: 75.5em;
+  margin: 0 auto;
+  padding-left: 3.8%;
+  padding-left: 20px;
+  padding-right: 20px; }
+  #overlay-container .overlay-row {
+    width: 100%;
+    max-width: 71.25em;
+    margin: 0 auto;
+    overflow: hidden; }
+    #overlay-container .overlay-row div {
+      min-height: 999em;
+      background: rgba(255, 0, 0, 0.07); }
+
+#breakpoints-overlay {
   max-width: 1140px;
   margin: 0 auto;
-  position: relative;
-  display: none; }
+  position: relative; }
 
 #meters {
   position: fixed;
@@ -568,28 +641,28 @@ img {
   background: rgba(143, 216, 243, 0.78);
   padding-top: 1em; }
 
-#breakpoints div {
+#meters div {
   background: rgba(207, 16, 147, 0.8);
   margin-bottom: 1em;
   padding: 0;
   color: #fff;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3); }
 
-#breakpoints div > span {
+#breakpoints-overlay div > span {
   padding: 10px;
   display: inline-block;
   font-size: .8em; }
 
-#breakpoints .pointname {
+#breakpoints-overlay .pointname {
   display: inline-block;
   width: 135px; }
 
-#breakpoints .emwidth {
+#breakpoints-overlay .emwidth {
   display: inline-block;
   width: 60px;
   padding-left: 15px; }
 
-#breakpoints .pxwidth {
+#breakpoints-overlay .pxwidth {
   display: inline-block;
   padding-left: 15px; }
 

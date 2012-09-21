@@ -1,6 +1,21 @@
 // Sample Layouts
 %sample {border-top: 1px solid #ccc; padding: 40px 0;}
 
+.feature-freeform {
+  @extend %sample;
+  @include container;
+  .feature-content {
+    @include row;
+    article {
+      padding: 20px;
+      background: #ddd;
+      @include column(8);
+      @include push(2);
+    }
+  }
+}
+
+
 /* McSweeney's-inspired layout */
 .mcs {
   @extend %sample;
