@@ -1,5 +1,78 @@
+// Examples
+
+// If you use normalize.css or reset.css, it will provide similar defaults.
+// This is mostly just to provide a baseline for demonstration purposes
+body { font-family: Helvetica Neue, Helvetica, Arial; font-size: 1em; padding: 0; margin: 0;}
+img, embed, object { max-width: 100%; }
+img {	height: auto; }
+
+
+[role="banner"] {
+  @include row;
+  h1 {
+    color: #b4ca75; border-bottom: 1px solid #ccc; padding-bottom: .7em;
+    span {font-size: .7em; color: #ccc;}
+  }
+}
+
+a {
+  color: #b4ca75d; text-decoration: none;
+  &:hover {color: #d78b42;}
+  &:visited {color: #d78b42;}
+}
+
+// To better see the example columns
+.row div {background: #ddd; margin-bottom: 1em; padding: 10px; text-align: center;}
+
+// Non-semantic helper classes
+// These defeat the purpose of a semantic grid, but sometimes you don't have access to SASS
+// Also, sometimes you just don't care
+.container {@include container;}
+.row       {@include row;}
+
+.col-1   {@include column(1);}
+.col-2   {@include column(2);}
+.col-3   {@include column(3);}
+.col-4   {@include column(4);}
+.col-5   {@include column(5);}
+.col-6   {@include column(6);}
+.col-7   {@include column(7);}
+.col-8   {@include column(8);}
+.col-9   {@include column(9);}
+.col-10  {@include column(10);}
+.col-11  {@include column(11);}
+.col-12  {@include column(12); @include last;}
+
+.push-1  {@include push(1);}
+.push-2  {@include push(2);}
+.push-3  {@include push(3);}
+.push-4  {@include push(4);}
+.push-5  {@include push(5);}
+.push-6  {@include push(6);}
+.push-7  {@include push(7);}
+.push-8  {@include push(8);}
+.push-9  {@include push(9);}
+.push-10 {@include push(10);}
+.push-11 {@include push(11);}
+
+.last   {@include last;}
+
 // Sample Layouts
 %sample {border-top: 1px solid #ccc; padding: 40px 0;}
+
+.feature-freeform {
+  @extend %sample;
+  @include container;
+  .feature-content {
+    @include row;
+    article {
+      padding: 20px;
+      background: #ddd;
+      @include column(8);
+      @include push(2);
+    }
+  }
+}
 
 /* McSweeney's-inspired layout */
 .mcs {
@@ -25,7 +98,8 @@
     }
   }
 }
-// Separated out design from the layout for clarity
+
+// Separated out design from the layout structure for clarity
 .mcs header {
   text-transform: uppercase;
   text-align: center;
@@ -81,7 +155,7 @@
     }
   }
 }
-// Separated out design from the layout for clarity
+// Separated out design from the layout structure for clarity
 .df-nav {
   text-align: right;
   ul {list-style: none; padding: 0;}
