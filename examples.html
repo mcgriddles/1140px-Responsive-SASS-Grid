@@ -2,6 +2,7 @@
 
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>Layout Examples | 1140px SASS Grid - A semantic grid system</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,30 +12,24 @@
 
   <body>
 
-    <div class="controls container">
-      <div class="row">
-        <div class="checkboxes">
-          <label><input type="checkbox" id="showbreakpoints"> Show breakpoints</label><br>
-          <label><input type="checkbox" id="showgrid"> Show grid</label>
-        </div>
-      </div>
+    <div class="controls">
+      <p>
+        <label><input type="checkbox" data-controls="breakpoints"> Show breakpoints</label>
+        <label><input type="checkbox" data-controls="grid"> Show grid</label>
+        <label><a href="index.html">View grid columns &raquo;</a></label>
+      </p>
     </div>
 
     <div class="container">
 
-      <header class="row" role="banner">
-        <h1>1140px SASS Grid</h1>
-
-        <h2>Example Layouts</h2>
-
-        <p><a href="index.html">View grid &raquo;</a></p>
+      <header role="banner">
+        <h1>1140px SASS Grid <span> a semantic grid system</span></h1>
       </header>
-
+      
       <header class="row">
-        <h2>Layout Examples</h2>
-        <p>These are default layouts to illustrate flexible columns. </p>
+        <h2>Example Layouts</h2>
       </header>
-
+      
       <div class="row">
         <div class="col-4 push-4">Four Columns</div>
       </div>
@@ -91,34 +86,6 @@
         <p>These examples feature breakpoints that change the structure by using `@extend` instead of nonsemantic grid classes like "col-8 push-2".</p>
       </header>
     </div>
-    
-    <div class="feature-freeform">
-        <div class="feature-content">
-          
-          <article>
-            <header>
-              <h1>Hello</h1>
-            </header>
-            <div class="article-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            
-            
-            <div class="row">
-              <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-               </div>
-               <div class="col-4"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-<div class="col-4 last"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-              
-            </div>
-          </article>
-          
-          
-          
-        </div>
-    </div>
-    
 
     <div class="mcs">
       <div class="mcs-content">
@@ -132,7 +99,7 @@
             <p>By Mr. Author</p>
           </header>
           <p>In a container with a width of the full 1140 pixels, a centered block of text spanning six or eight columns might look fine, but as it scales down, it will become too narrow before it hits mobile breakpoints. By using mixins, we can easily change the number of columns at each breakpoint.</p>
-          <img src="http://www.placehold.it/1200x400.png/FF1493/fff&text=grids+are+fun">
+          <img src="http://www.placehold.it/1200x400.png/b4ca75/fff&text=grids+are+fun">
           <p>Compare this to the centered four columns above, which becomes too narrow as you resize the page inward.</p>
         </article>
       </div>
@@ -157,7 +124,7 @@
           <article>
             <h1>Article Title</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <img src="http://www.placehold.it/1200x400.png/FF1493/fff&text=grids+are+fun">
+              <img src="http://www.placehold.it/1200x400.png/b4ca75/fff&text=grids+are+fun">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </article>
         </div>
@@ -167,31 +134,8 @@
 
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-  <script>
-      var docHeight = $(document).height();
-      
-      function calcWidth() {
-        $('#breakpoints div').each(function(){
-          var thiswidth = $(this).width();
-          $('.pxwidth', this).text(thiswidth + " px");
-        });
-      }
-      
-      $(document).ready(function() {
-        calcWidth();
-      });
-      
-      $(window).resize(function() {
-        calcWidth();
-      });
-      
-      $("#showbreakpoints").click(function() {
-        $('#breakpoints').toggle('fast');
-        calcWidth();
-      });
-
-    </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="examples.js"></script>
+    
   </body>
 </html>

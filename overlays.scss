@@ -1,0 +1,67 @@
+// Overlays
+
+%overlay {pointer-events: none;}
+
+.controls {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  p {position: fixed; right: 20px;}
+  label {
+    font-size: .8em;
+    min-width: 150px;
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    background: rgba(255,255,255,.7);
+    border: 1px solid rgba(0,0,0,.1);
+  }
+}
+
+// Grid Overlay
+#grid-overlay {
+  @extend %overlay;
+  position: fixed; width: 100%; height: 100%;
+}
+
+#overlay-container {
+  max-width: 75.5em; margin: 0 auto; padding-left: 3.8%;
+  @include container;
+  .overlay-row {
+    @include row;
+    div {
+      min-height: 999em;
+      background: rgba(255,0,0,.07);
+      border-right: 1px solid rgba(255,0,0,.05); border-left: 1px solid rgba(255,0,0,.05);
+    }
+  }
+}
+
+// Breakpoints Overlay
+#breakpoints-overlay {
+  @extend %overlay;
+  max-width: 1140px;  margin: 0 auto; position: relative;
+  div > span {font-size: .8em;}
+  span       {display: inline-block; padding: 5px;}
+  .pointname {width: 135px;}
+  .emwidth   {width: 50px; padding-left: 15px;}
+  .pxwidth   {padding-left: 15px;}
+}
+
+#meters {
+  position: fixed; z-index: 1; top: 50px;
+  max-width: 1140px; width: 100%;
+  padding-top: 1em;
+  div {
+    background: transparentize(fuchsia,.4);
+    margin-bottom: 1em; padding: 0;
+    color: #fff; text-shadow: 0px -1px 0px rgba(0,0,0,.3);
+  }
+}
+
+.break-20em   {max-width: 20em;}
+.break-30em   {max-width: 30em;}
+.break-355em  {max-width: 35.5em;}
+.break-48em   {max-width: 48em;}
+.break-64em   {max-width: 64em;}
+.break-7125em {max-width: 71.25em;}

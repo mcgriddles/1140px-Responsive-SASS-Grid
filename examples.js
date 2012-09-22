@@ -1,43 +1,33 @@
 function calcWidth() {
-  $('#breakpoints div').each(function(){
-    var thiswidth = $(this).width();
-    $('.pxwidth', this).text(thiswidth + " px");
-  });
+  if ($('#breakpoints-overlay').length){
+    $('#breakpoints-overlay div').each(function(){
+      var thiswidth = $(this).width();
+      $('.pxwidth', this).text(thiswidth + " px");
+    });
+  }
 }
 
-$(document).ready(function() {
-  calcWidth();
+$('.controls input').click(function () {
+  var thisControls =  $(this).data('controls');
+  var thisLoads    =  "_" + thisControls + ".html";
+  var thisOverlay  =  '#' + thisControls + "-overlay";
+  
+  if ($(this).is(':checked')) {
+      $.ajax({
+        type: "GET",
+        context: document,
+        url: thisLoads,
+        dataType: "html",
+        success: function(data) {
+          $('body').prepend(data);
+          calcWidth();
+        }
+      });
+  } else {
+    $(thisOverlay).remove();
+  }
 });
 
 $(window).resize(function() {
   calcWidth();
-});
-
-$('#controls input').click(function () {
-  var loadIt = $(this).data('load');
-  $.get("_breakpoints.html", function (data) {
-    $("body").prepend(data);
-  });
-});
-
-
-
-$('.controls input').click(function () {
-  $(this).toggleClass('active');
-  
-  var thisControls = $(this).data('controls');
-  var thisLoads = "_" + thisControls + ".html";
-
-  if ($(this).hasClass('active')) {
-    $.get(thisLoads, function (data) {
-      $("body").prepend(data);
-    });
-  
-  } else {
-  
-    $('#' + thisControls).remove();
-    
-  }
-
-  
 });
