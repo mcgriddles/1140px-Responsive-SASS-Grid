@@ -9,7 +9,7 @@ function calcWidth() {
 
 $('.controls input').click(function () {
   var thisControls =  $(this).data('controls');
-  var thisLoads    =  "_" + thisControls + ".html";
+  var thisLoads    =  thisControls + ".html";
   var thisOverlay  =  '#' + thisControls + "-overlay";
   
   if ($(this).is(':checked')) {
