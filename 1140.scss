@@ -23,7 +23,7 @@
 // Column Killer Mixin - All columns go full-width when window hits this breakpoint
 @mixin column-killer {
   @media (max-width: $column-killer-breakpoint) {
-    width: auto;
+    width: 100%;
     float: none;
     margin-left: 0;
     margin-right: 0;
